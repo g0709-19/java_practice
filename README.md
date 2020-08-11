@@ -1,4 +1,4 @@
-<h1 align="center">Java</h1>
+<h1 align="center">☕ Java</h1>
 <p align="center">
 2학년 2학기... 오퍼레이팅 시스템 A+을 위해..
 <br>
