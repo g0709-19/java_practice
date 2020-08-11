@@ -27,7 +27,27 @@ JFrame.setLocation(int x, int y)
 
 ### JFrame 크기 조절
 ```
-Dimension(int x, int y);
+new Dimension(int x, int y);
 JFrame.setPrefferedSize(Dimension);
 ```
 **크기 조절 이후에 JFrame.pack() 을 해주지 않으면 적용 되지 않음**
+
+## 3. 자바 JLabel 사용하기
+### JLabel 생성
+```
+new JLabel(String);
+JFrame.add(JLabel);
+```
+
+### JLabel Method
+```
+JLabel.setText(String);
+JLabel.getText();
+JLabel.setVerticalAlignment(SwingConstants);
+JLabel.setHorizontalAlignment(SwingConstants);
+JLabel.getVerticalAlignment();
+JLabel.getHorizontalAlignment();
+```
+
+### 왜 SwingConstants 는 Interface 일까?
+정의된 메소드가 따로 없기 때문에 enum 으로 작성하는게 적합하다고 생각했지만 interface 인 이유는 SwingConstants 를 구현하는 클래스가 필요한 경우가 생기는걸까?
