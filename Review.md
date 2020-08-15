@@ -5,6 +5,7 @@
 2. <a href="#2-GUI-JFrame-크기-위치-및-좌표계">GUI JFrame 크기, 위치 및 좌표계</a>
 3. <a href="#3-JLabel-사용하기">JLabel 사용하기</a>
 4. <a href="#4-Font-클래스">Font 클래스</a>
+4. <a href="#5-Color-클래스">Color 클래스</a>
 
 <br><br>
 
@@ -84,8 +85,37 @@ JLabel.setFont(font);
 
 ### Method
 ```
-Font.getSize(): 폰트 크기 정보 가져옴
-Font.getName(), Font.getFontName(): 폰트 종류 가져옴
-Font.getStyle(): 폰트 스타일 가져옴
-Font.isBold(), Font.isItalic(), Font.isPlain(): 각 스타일 여부 가져옴
+Font.getSize() // 폰트 크기 정보 가져옴
+Font.getName(), Font.getFontName() // 폰트 종류 가져옴
+Font.getStyle() // 폰트 스타일 가져옴
+Font.isBold(), Font.isItalic(), Font.isPlain() // 각 스타일 여부 가져옴
 ```
+
+## 5. Color 클래스
+색의 정보를 가짐, R, G, B, Alpha (0~255)
+
+```
+JLabel.setOpaque(true); // false 면 적용되지 않음
+new Color(0x000000); // r, g, b
+new Color(r, g, b);
+JLabel.setForeground(Color);
+JLabel.setBackground(Color);
+```
+
+### 투명도
+
+```
+    new Color(0x55000000, true); // alpha, r, g, b
+    new Color(255, 0, 0, 200); // r, g, b, alpha
+```
+
+### Method
+```
+Color.getRed(), Color.getGreen(), Color.getBlue(): 각 색 가져옴
+Color.getAlpha(): 투명도 가져옴
+Color.getRGB(): 색 정보 전부 가져옴
+// Integer.toHexString(Color.getRGB());
+```
+
+### Static Color
+> Color.<색>

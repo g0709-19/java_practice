@@ -1,5 +1,6 @@
 package me.Jun.SwingPractice.main;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -21,20 +22,18 @@ public class Example
 		label.setText("이승준");
 		label.setVerticalAlignment(SwingConstants.CENTER);
 		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setOpaque(true);
 		
 		Font font = new Font("궁서", Font.BOLD, 50);
 		label.setFont(font);
 		
+		Color color = new Color(0x55000000, true);
+		Color color2 = new Color(0, 255, 0, 200);
+		label.setForeground(color);
+		label.setBackground(color2);
+		
 		frame.add(label);
 		frame.pack();
 		frame.setVisible(true);
-		
-		System.out.println("font.getSize(): " + font.getSize());
-		System.out.println("font.getName(): " + font.getName());
-		System.out.println("font.getFontName(): " + font.getFontName());
-		System.out.println("font.getStyle(): " + font.getStyle());
-		System.out.println("font.isBold(): " + font.isBold());
-		System.out.println("font.isItalic(): " + font.isItalic());
-		System.out.println("font.isPlain(): " + font.isPlain());
 	}
 }
