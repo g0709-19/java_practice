@@ -1,13 +1,14 @@
 # Java GUI
 
 ## 목차  
-1. <a href="#1-자바-GUI-프로그래밍-개요">자바 GUI 프로그래밍 개요</a>
-2. <a href="#2-자바-GUI-JFrame-크기-위치-및-좌표계">자바 GUI JFrame 크기, 위치 및 좌표계</a>
-3. <a href="#3-자바-JLabel-사용하기">자바 JLabel 사용하기</a>
+1. <a href="#1-GUI-프로그래밍-개요">GUI 프로그래밍 개요</a>
+2. <a href="#2-GUI-JFrame-크기-위치-및-좌표계">GUI JFrame 크기, 위치 및 좌표계</a>
+3. <a href="#3-JLabel-사용하기">JLabel 사용하기</a>
+4. <a href="#4-Font-클래스">Font 클래스</a>
 
 <br><br>
 
-## 1. 자바 GUI 프로그래밍 개요
+## 1. GUI 프로그래밍 개요
 ### Hello world 출력
 ```
 JFrame frame = new JFrame(제목);
@@ -25,7 +26,7 @@ frame.setVisible(true);
 
 <br><br>
 
-## 2. 자바 GUI JFrame 크기, 위치 및 좌표계
+## 2. GUI JFrame 크기, 위치 및 좌표계
 ### JFrame 위치 지정
 ```
 JFrame.setLocation(int x, int y)
@@ -43,7 +44,7 @@ JFrame.setPrefferedSize(Dimension);
 
 <br><br>
 
-## 3. 자바 JLabel 사용하기
+## 3. JLabel 사용하기
 ### JLabel 생성
 ```
 new JLabel(String);
@@ -62,3 +63,29 @@ JLabel.getHorizontalAlignment();
 
 ### 왜 SwingConstants 는 Interface 일까?
 정의된 메소드가 따로 없기 때문에 enum 으로 작성하는게 적합하다고 생각했지만 interface 인 이유는 SwingConstants 를 구현하는 클래스가 필요한 경우가 생기는걸까?
+
+## 4. Font 클래스
+글자 스타일 지정, 3가지 속성
+
+### 글자 종류
+컴퓨터에 있는 폰트들의 이름
+
+### 글자 스타일
+* BOLD
+* ITALIC
+* PLAIN
+
+### 글자 크기
+
+```
+new Font(<종류>, Font.<스타일>, <크기>);
+JLabel.setFont(font);
+```
+
+### Method
+```
+Font.getSize(): 폰트 크기 정보 가져옴
+Font.getName(), Font.getFontName(): 폰트 종류 가져옴
+Font.getStyle(): 폰트 스타일 가져옴
+Font.isBold(), Font.isItalic(), Font.isPlain(): 각 스타일 여부 가져옴
+```

@@ -1,6 +1,7 @@
 package me.Jun.SwingPractice.main;
 
 import java.awt.Dimension;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,22 +11,30 @@ public class Example
 {
 	public static void main(String args[])
 	{
-		Dimension dim = new Dimension(200, 100);
+		Dimension dim = new Dimension(500, 500);
 		
 		JFrame frame = new JFrame("Jun's House");
 		frame.setLocation(200, 400);
 		frame.setPreferredSize(dim);
 		
 		JLabel label = new JLabel();
-		label.setText("setText Test");
+		label.setText("이승준");
 		label.setVerticalAlignment(SwingConstants.CENTER);
 		label.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		Font font = new Font("궁서", Font.BOLD, 50);
+		label.setFont(font);
 		
 		frame.add(label);
 		frame.pack();
 		frame.setVisible(true);
 		
-		System.out.println(label.getVerticalAlignment());
-		System.out.println(label.getHorizontalAlignment());
+		System.out.println("font.getSize(): " + font.getSize());
+		System.out.println("font.getName(): " + font.getName());
+		System.out.println("font.getFontName(): " + font.getFontName());
+		System.out.println("font.getStyle(): " + font.getStyle());
+		System.out.println("font.isBold(): " + font.isBold());
+		System.out.println("font.isItalic(): " + font.isItalic());
+		System.out.println("font.isPlain(): " + font.isPlain());
 	}
 }
