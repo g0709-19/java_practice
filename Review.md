@@ -1,5 +1,12 @@
 # Java GUI
 
+## 목차  
+1. <a href="#1-자바-GUI-프로그래밍-개요">자바 GUI 프로그래밍 개요</a>
+2. <a href="#2-자바-GUI-JFrame-크기-위치-및-좌표계">자바 GUI JFrame 크기, 위치 및 좌표계</a>
+3. <a href="#3-자바-JLabel-사용하기">자바 JLabel 사용하기</a>
+
+<br><br>
+
 ## 1. 자바 GUI 프로그래밍 개요
 ### Hello world 출력
 ```
@@ -16,6 +23,8 @@ frame.setVisible(true);
 
 **기존에 '이전에 실행시켰던 어플리케이션 시작'으로 되어있음**
 
+<br><br>
+
 ## 2. 자바 GUI JFrame 크기, 위치 및 좌표계
 ### JFrame 위치 지정
 ```
@@ -31,6 +40,8 @@ new Dimension(int x, int y);
 JFrame.setPrefferedSize(Dimension);
 ```
 **크기 조절 이후에 JFrame.pack() 을 해주지 않으면 적용 되지 않음**
+
+<br><br>
 
 ## 3. 자바 JLabel 사용하기
 ### JLabel 생성
