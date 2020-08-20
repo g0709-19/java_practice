@@ -9,4 +9,5 @@
 <ul>
 <li><a href="https://blog.naver.com/highkrs/220532346047">Java 강의 - 모프</a></li>
 <li><a href="https://raccoonjy.tistory.com/16?category=744507">자바(Java)의 기초 박살내기 - 조재연</a></li>
+<li><a href="https://youtu.be/J44d_ynAqNY">간단한 계산기 만들기 - Danny TWLC</a></li>
 </ul>
