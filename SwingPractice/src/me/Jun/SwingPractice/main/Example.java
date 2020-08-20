@@ -3,6 +3,7 @@ package me.Jun.SwingPractice.main;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,21 +19,24 @@ public class Example
 		frame.setLocation(200, 400);
 		frame.setPreferredSize(dim);
 		
-		JLabel label = new JLabel();
-		label.setText("이승준");
-		label.setVerticalAlignment(SwingConstants.CENTER);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setOpaque(true);
+		GridLayout layout = new GridLayout(2, 3);
+		frame.setLayout(layout);
 		
-		Font font = new Font("궁서", Font.BOLD, 50);
-		label.setFont(font);
+		Color[] colors = { Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE, Color.GREEN, Color.PINK };
 		
-		Color color = new Color(0x55000000, true);
-		Color color2 = new Color(0, 255, 0, 200);
-		label.setForeground(color);
-		label.setBackground(color2);
+		for (Color color : colors) {
+			Font font = new Font("a나무M", Font.BOLD, 20);
+			
+			JLabel label = new JLabel();
+			label.setText("이승준");
+			label.setFont(font);
+			label.setHorizontalAlignment(SwingConstants.CENTER);
+			label.setOpaque(true);
+			label.setForeground(Color.WHITE);
+			label.setBackground(color);
+			frame.add(label);
+		}
 		
-		frame.add(label);
 		frame.pack();
 		frame.setVisible(true);
 	}

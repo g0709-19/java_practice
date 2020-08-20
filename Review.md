@@ -6,6 +6,7 @@
 3. <a href="#3-JLabel-사용하기">JLabel 사용하기</a>
 4. <a href="#4-Font-클래스">Font 클래스</a>
 4. <a href="#5-Color-클래스">Color 클래스</a>
+4. <a href="#6-GridLayout">GridLayout</a>
 
 <br><br>
 
@@ -65,6 +66,8 @@ JLabel.getHorizontalAlignment();
 ### 왜 SwingConstants 는 Interface 일까?
 정의된 메소드가 따로 없기 때문에 enum 으로 작성하는게 적합하다고 생각했지만 interface 인 이유는 SwingConstants 를 구현하는 클래스가 필요한 경우가 생기는걸까?
 
+<br><br>
+
 ## 4. Font 클래스
 글자 스타일 지정, 3가지 속성
 
@@ -75,6 +78,8 @@ JLabel.getHorizontalAlignment();
 * BOLD
 * ITALIC
 * PLAIN
+
+Font에 포함되어 있음
 
 ### 글자 크기
 
@@ -91,6 +96,8 @@ Font.getStyle() // 폰트 스타일 가져옴
 Font.isBold(), Font.isItalic(), Font.isPlain() // 각 스타일 여부 가져옴
 ```
 
+<br><br>
+
 ## 5. Color 클래스
 색의 정보를 가짐, R, G, B, Alpha (0~255)
 
@@ -105,8 +112,8 @@ JLabel.setBackground(Color);
 ### 투명도
 
 ```
-    new Color(0x55000000, true); // alpha, r, g, b
-    new Color(255, 0, 0, 200); // r, g, b, alpha
+new Color(0x55000000, true); // alpha, r, g, b
+new Color(255, 0, 0, 200); // r, g, b, alpha
 ```
 
 ### Method
@@ -119,3 +126,17 @@ Color.getRGB(): 색 정보 전부 가져옴
 
 ### Static Color
 > Color.<색>
+
+<br><br>
+
+# 6. GridLayout
+임의의 열과 행에 각종 UI를 **똑같이** 나누어 배치하는 레이아웃
+
+<img src="img/1.png">
+
+여러개 UI를 add하면 모두 겹쳐서 마지막에 추가한 UI만 보임
+
+```
+new GridLayout(<ROW>, <COLUMN>);
+JFRame.setLayout(GridLayOut);
+```
