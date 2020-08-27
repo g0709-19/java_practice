@@ -1,16 +1,18 @@
 package me.Jun.SwingPractice.main;
 
+import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
 public class Example
 {
@@ -22,24 +24,33 @@ public class Example
 		frame.setLocation(200, 400);
 		frame.setPreferredSize(dim);
 		
-		GridLayout layout = new GridLayout(2, 1);
+		CardLayout layout = new CardLayout();
 		frame.setLayout(layout);
 		
-		JLabel label = new JLabel(String.valueOf(0));
-		label.setFont(new Font("Arial", Font.BOLD, 50));
-		label.setHorizontalAlignment(SwingConstants.CENTER);
+		Panel panel = new Panel();
+		panel.setBackground(Color.BLUE);
+		frame.add(panel);
 		
-		JButton button = new JButton("Click!");
-		button.setBackground(Color.PINK);
-		button.setFont(new Font("Cooper Blk BT", Font.BOLD, 50));		
-		button.setToolTipText("버튼을 클릭하면 숫자가 늘어날거에요.");
+		Panel panel2 = new Panel();
+		panel2.setBackground(Color.RED);
+		frame.add(panel2);
 		
-		frame.add(label);
-		frame.add(button);
+		MouseListener mouse = new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				layout.next(frame.getContentPane());
+				System.out.println("hi");
+			}
+		};
 		
-		ClickEvent click = new ClickEvent(label);
-		button.addActionListener(click);
+		panel.addMouseListener(mouse);
+		panel2.addMouseListener(mouse);
+//		FlowLayout layout = new FlowLayout();
+//		BoxLayout layout = new BoxLayout(frame.getContentPane(), BoxLayout.X_AXIS);
 		
+		for(int i=0;i<20;++i) {
+			frame.add(new JButton("Test Button"));
+		}
+
 		frame.pack();
 		frame.setVisible(true);
 	}
